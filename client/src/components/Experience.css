@@ -1,0 +1,117 @@
+/* Section Styling */
+.experience-container {
+  background-color: #0a0a23;
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+/* Title with gradient + underline */
+.experience-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #60A5FA, #3B82F6, #2563EB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+.experience-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #60A5FA, #2563EB);
+  margin: 6px auto 0;
+  border-radius: 2px;
+}
+
+/* Subtitle */
+.experience-subtitle {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-bottom: 3rem;
+}
+
+/* Container with timeline */
+.experience-list {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 2rem;
+}
+
+/* Vertical line */
+.experience-list::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #1e40af; /* deep blue */
+}
+
+/* Experience Card */
+.experience-card {
+  position: relative;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Dot for timeline */
+.experience-card::after {
+  content: "";
+  position: absolute;
+  left: -43px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  background-color: #3b82f6; /* bright blue */
+  border: 3px solid #1e3a8a;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Headings */
+.experience-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.experience-card h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #60a5fa;
+  margin-bottom: 0.5rem;
+}
+
+/* Duration */
+.experience-duration {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Description */
+.experience-card p {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  line-height: 1.4;
+}

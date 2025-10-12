@@ -1,0 +1,211 @@
+.contact-section {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 4rem 1rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== HEADING ===== */
+.contact-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+
+  /* Gradient text */
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline below heading */
+.contact-heading::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  margin: 6px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== SUBHEADING ===== */
+.contact-subheading {
+  font-size: 1rem;
+  color: #d1d5db;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline below subtitle 
+.contact-subheading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  margin: 6px auto 0;
+  border-radius: 2px;
+}    */
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 0 5px rgba(139, 92, 246, 0.4);
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form input:hover,
+.contact-form textarea:hover {
+  box-shadow: 0 0 12px #3b82f6;
+  background-color: #222;
+  transform: scale(1.02);
+}
+
+/* ===== BUTTON ===== */
+.contact-form button {
+  padding: 12px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+}
+
+
+.ping-pong-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.ball {
+  width: 28px;
+  height: 28px;
+  background-color: orange;
+  border-radius: 50%;
+  animation: bounce 0.5s infinite alternate ease-in-out;
+  box-shadow: 0 0 12px orange;
+}
+
+.shadow {
+  width: 48px;
+  height: 6px;
+  background-color: rgba(255, 165, 0, 0.3);
+  border-radius: 50%;
+  margin-top: 10px;
+  animation: shadow-scale 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-40px); }
+}
+
+@keyframes shadow-scale {
+  0% { transform: scaleX(1); }
+  100% { transform: scaleX(1.5); }
+}
+
+
+
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: 80px;
+  padding: 20px;
+  background-color: #111;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer span {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+.heart {
+  color: red;
+  display: inline-block;
+  animation: heartbeat 1.2s infinite;
+  transform-origin: center;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.react-logo {
+  display: inline-block;
+  vertical-align: middle; /* keeps it aligned with text */
+  margin-left: 6px;       /* add small spacing from text */
+}
+
+.react-icon {
+  width: 28px;
+  height: 28px;
+  animation: spin 6s linear infinite;
+  vertical-align: middle; /* aligns with text baseline */
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
