@@ -1,9 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path'); // ✅ Add this
 require('dotenv').config();
 
-const contactRoutes = require('./routes/contact'); // ✅ Add this
+const contactRoutes = require('./routes/contact');
 
 const app = express();
 app.use(cors());
@@ -14,11 +15,20 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
-// Routes
-app.use('/api/contact', contactRoutes); // ✅ Use route here
+// API Routes
+app.use('/api/contact', contactRoutes);
+
+// Serve React frontend in production
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+  });
+}
 
 // Start server
-const PORT = process.env.PORT || 5000; 
-app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
