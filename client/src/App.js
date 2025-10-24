@@ -1,6 +1,6 @@
 // src/App.js
 import './App.css';
-import 'devicon/devicon.min.css';
+//import 'devicon/devicon.min.css';
 
 import Home from './components/Home';
 import About from './components/About';
