@@ -83,3 +83,32 @@
   color: white !important;
   fill: white !important;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 3rem 1rem;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skills-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-card {
+    padding: 0.8rem;
+  }
+
+  .skill-icon {
+    font-size: 2rem;
+  }
+}

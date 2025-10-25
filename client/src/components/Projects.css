@@ -169,3 +169,49 @@
   min-height: 100vh;
   padding: 2rem 0;
 }
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 3rem 1rem; /* reduce padding for small screens */
+    text-align: center;
+  }
+
+  .projects-title {
+    font-size: 2rem; /* smaller title */
+  }
+
+  .projects-subtitle {
+    font-size: 1rem; /* smaller subtitle */
+    margin-bottom: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .project-card {
+    padding: 1rem; /* reduce card padding */
+    text-align: center; /* center text for mobile */
+  }
+
+  .project-name {
+    font-size: 1.2rem;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+  }
+
+  .tech-stack {
+    justify-content: center; /* center badges */
+    gap: 0.5rem;
+  }
+
+  .btn-glow,
+  .btn-glow-outline {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.8rem;
+  }
+}
