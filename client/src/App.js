@@ -64,21 +64,7 @@ function App() {
             <section id="education"><Education /></section>
             <section id="contact"><Contact /></section>
 
-            {/* Chat Section */}
-            <section id="chat" style={{ padding: "2rem", borderTop: "1px solid #ccc" }}>
-              <h2>Live Chat</h2>
-              <div style={{ maxHeight: "200px", overflowY: "scroll", border: "1px solid #ddd", padding: "0.5rem", marginBottom: "0.5rem" }}>
-                {messages.map((m, i) => <div key={i}>{m}</div>)}
-              </div>
-              <input 
-                type="text" 
-                value={input} 
-                onChange={(e) => setInput(e.target.value)} 
-                placeholder="Type your message..." 
-                style={{ padding: "0.5rem", width: "70%" }}
-              />
-              <button onClick={sendMessage} style={{ padding: "0.5rem 1rem", marginLeft: "0.5rem" }}>Send</button>
-            </section>
+           
           </main>
         </>
       )}
